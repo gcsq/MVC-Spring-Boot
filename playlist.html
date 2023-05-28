@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Playlist</title>
+    <style>
+        body{background-color: #ffa500}
+
+    </style>
+</head>
+
+<body>
+
+<h1> Lista de Musicas </h1>
+<hr>
+<table>
+    <thead>
+    <tr>
+        <th>Artista</th>
+        <th>Nome da Musica</th>
+        <th>Duração</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr th:each="playlist:${playlist}">
+        <td th:text="${playlist.artista}">Artista</td>
+        <td th:text="${playlist.nm_musica}">Nome da Musica</td>
+        <td th:text="${playlist.tp_musica}">Duraçao</td>
+    </tr>
+    </tbody>
+
+</table>
+
+
+</body>
+</html>
